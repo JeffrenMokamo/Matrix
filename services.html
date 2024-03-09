@@ -21,7 +21,20 @@
         <!--    CraigStyle-->
         <!-- ===============================================-->
         <link href="assets/css/theme.css" rel="stylesheet"/>
-        <style type="text/css">.craiglogobar { display: flex; justify-content: flex-start; align-items: flex-start; }</style>
+        <style type="text/css">.craiglogobar { display: flex; justify-content: flex-start; align-items: flex-start; }
+        
+        @media (max-width: 1000px) {
+            
+            .service{
+                flex-direction: column;
+            }
+            .service-2{
+                flex-direction: column-reverse;
+            }
+
+        }    
+
+        </style>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-light sticky-top" data-navbar-on-scroll="data-navbar-on-scroll">
@@ -73,14 +86,13 @@
             <!-- ============================================-->
             <!-- <section> début ============================-->
                 <section class="pt-5 pt-md-9 mb-6" id="feature">
-                    <div class="bg-holder z-index--1 bottom-0 d-none d-lg-block" style="background-image:url(assets/img/category/shape.png);opacity:.5;"></div>
                     <!--/.bg-holder-->
                     <div class="container">
-                            <div class="d-flex gap-3 mb-6 align-items-center"> 
-                                <div class="col-lg-4">
-                                    <img class="mb-3 ms-n3" src="assets/img/category/icon1.png" width="75" alt="Feature"/>
+                            <div class="d-flex gap-3 mb-6 align-items-center justify-content-center service"> 
+                                <div class="col-lg-6">
+                                    <img class="mb-3 ms-n3" src="assets/img/category/icon1.png" alt="Feature"/>
                                 </div>
-                                <div class="">
+                                <div class="col-lg-6">
                                     <h4 class="mb-3 fs-5 fw-semibold">Création de solutions numériques</h4>
                                     <p class="mb-0 fw-medium text-secondary">Vous avez une idée de projet numérique ? Nous la transformons en réalité ! Que ce soit une application, un logiciel, un site web ou autre, nous vous accompagnons de la conception à la 
                                     réalisation de votre solution numérique sur mesure. Nous utilisons les technologies les plus adaptées à vos besoins et à votre budget</p>
@@ -89,25 +101,25 @@
                     </div>
 
                     <div class="container">
-                        <div class="d-flex gap-3 mb-6 pt-7 align-items-center"> 
-                            <div class="col-lg-8">
+                        <div class="d-flex gap-3 mb-6 pt-7 align-items-center justify-content-center service-2"> 
+                            <div class="col-lg-6">
                                 <h4 class="mb-3 fs-5 fw-semibold">Création de solutions électroniques</h4>
                                 <p class="mb-0 fw-medium text-secondary">Vous cherchez à optimiser vos performances, votre confort ou votre sécurité ? 
                                 Nous vous proposons des solutions électroniques personnalisées qui répondent à vos attentes. ue ce soit un ordinateur, des écouteurs Bluetooth, des capteurs ou autre, nous assemblons et installons 
                                 les composants électroniques nécessaires à votre solution électronique sur mesure. Nous vous offrons également un service de maintenance et de support technique de qualité.</p>
                             </div>
-                            <div class="col-lg-4">
-                                <img class="mb-3 ms-n3" src="assets/img/category/icon2.png" width="75" alt="Feature"/>
+                            <div class="col-lg-6">
+                                <img class="mb-3 ms-n3" src="assets/img/category/icon2.png" alt="Feature"/>
                             </div>
                         </div>
                     </div>
 
                     <div class="container">
-                        <div class="d-flex mb-6 gap-3 align-items-center pt-7"> 
-                            <div class="col-lg-4">
-                                <img class="mb-3 ms-n3" src="assets/img/category/icon3.png" width="75" alt="Feature"/>
+                        <div class="d-flex mb-6 gap-3 align-items-center pt-7 justify-content-center service"> 
+                            <div class="col-lg-6">
+                                <img class="mb-3 ms-n3" src="assets/img/category/icon3.png" alt="Feature"/>
                             </div>
-                            <div class="col-lg-8">
+                            <div class="col-lg-6">
                                 <h4 class="mb-3 fs-5 fw-semibold">Création de solutions mécaniques</h4>
                                 <p class="mb-0 fw-medium text-secondary">Vous voulez innover, créer ou réparer ? 
                                 Nous vous apportons des solutions mécaniques adaptées à vos besoins. Que ce soit une moto, un robot, une machine-outil ou autre, nous concevons et fabriquons votre solution mécanique sur mesure. 
@@ -117,59 +129,6 @@
                     </div>
                     <!-- end of .container-->
                 </section>
-            <!-- <section> close ============================-->
-            <!-- ============================================-->
-            <!-- ============================================-->
-            <!-- <section> begin ============================-->
-            <section class="pt-5" id="validation">
-                <div class="container">
-
-                        <div class="mb-6">
-                            <h2 class="mb-5 fs-7 fw-bold">Nottre offre</h2>
-                            <h4 class="mb-4 fs-6 fw-semibold">
-                                Nous sommes à l’écoute de vos besoins et de vos envies, et nous avons ce qu’il vous faut au quotidien</h4>
-                            <h4 class="mb-4 fs-4 fw-medium">Nous ne contentons pas de vous satisfaire, nous vous faisons rêver. Avec nos produits, vous découvrez des univers inédits</h4>
-
-                        </div>
-
-                        <div class="row pt-5">
-
-                            <div class="col-lg-4 p-4 mb-4">
-
-                                <h1 class="fs-3 fw-bold text-center mb-4">
-                                    Ecouteur: I-pods
-                                </h1>
-
-                                <p class="secondary">
-                                    I-pods, les écouteurs Bluetooth qui vous font vibrer au rythme de la musique. Profitez d’un son haute fidélité, d’une batterie longue durée et d’un design élégant.
-                                </p>
-
-                            </div>
-                            <div class="col-lg-4 bg-primary rounded p-4 mb-4">
-                                <h1 class="fs-3 fw-bold text-center text-white mb-4">
-                                    Magazine Matrix Junior
-                                </h1>
-
-                                <p class="text-secondary text-white">
-                                    Un magazine de qualité qui vous apprend à maitriser des outils numériques, créer des objets connectés et utiliser l'intelligence artificielle. destiné aux écoliers et au curieux du monde de demain
-                                </p>
-                            </div>  
-                            <div class="col-lg-4 p-4 mb-4">
-                                <h1 class="fs-3 fw-bold text-center mb-4">
-                                    Dessin animé: Les découvertes de Génial
-                                </h1>
-
-                                <p class="text-secondary">
-                                    Pour éveiller la curiosité et l'imagination des enfants, rien de tel que de les faire voyager dans des univers fantastiques, où ils peuvent rencontrer des personnages extraordinaires, 
-                                    résoudre des énigmes, et vivre des émotions fortes. les aventures stimulent leur soif de decouverte, leur créativité, et leur confiance en eux.
-                                </p>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- end of .container-->
-            </section>
             <!-- <section> close ============================-->
 
         <section class="pb-2 pb-lg-5"> 
@@ -214,7 +173,7 @@
                     </div>             
                     <div class="col-lg-3 col-md-6 col-6 mb-4 mb-lg-0 order-2 order-md-2 order-lg-4"> 
                         <p class="fs-2 mb-lg-4"> 
-                        Avec <?= $APP_NAME?>. vos besoins, au centre de nos prréopréoccupations</p> 
+                        Avec Matrix. vos besoins, au centre de nos préoccupations</p> 
                         <form class="mb-3"> 
                             <input class="form-control" type="email" placeholder="Ecrivez nous" aria-label="phone"/> 
                         </form>                 
