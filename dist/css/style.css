@@ -3,10 +3,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+*, ::before, ::after{
+    list-style: none;
+    text-decoration: none!important;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 /* Les variables */
 
 :root{
-    --couleurPrincipal : #0077b5;
+    --couleurPrincipal: #0077b5;
+    --colorWhite: #ffffff;
+}
+
+body{
+    font-size: 1rem;
 }
 
 /* La navigation active */
@@ -16,21 +29,13 @@
     font-weight: 500;
 }
 
-*, ::before, ::after{
-    list-style: none;
-    text-decoration: none!important;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body{
-    font-size: 1rem;
-}
+/* Nav-bar */
 
 header{
     padding: 20px;
-    border-bottom: 1px solid rgba(217, 217, 217, .5);
+    /* border-bottom: 1px solid rgba(217, 217, 217, .5); */
+    z-index: 100;
+    background-color: var(--colorWhite);
 }
 
 header .conteneur nav{
@@ -42,21 +47,42 @@ header .conteneur nav ul li a{
     transition: all .2s ease-in-out;
 }
 
-header .conteneur nav ul li a:hover{
-    color: var(--couleurPrincipal)!important;
-    font-weight: 500;
-}
+/* Pseudo :is() */
 
-header .cont button{
+:is(header, .accueil) button {
     transition: background-color .4s ease-in-out;
     padding: 0.6rem 1.5rem;
-    color: var(--couleurPrincipal);
-    background-color: #fff;
+    color: var(--colorWhite);
+    background-color: var(--couleurPrincipal);
     border-radius: 50px;
     border: 1px solid var(--couleurPrincipal);
 }
 
-header .cont button:hover{
-    color: #fff;
-    background-color: var(--couleurPrincipal);
+:is(header, .accueil) button:hover{
+    color: var(--couleurPrincipal);
+    background-color: var(--colorWhite);   
+}
+
+/* Section Accueil */
+
+.accueil{
+    width: 100%;
+    overflow-x: hidden;
+    margin-top: 100px;
+}
+
+.accueil video{
+    width: 100%;
+
+}
+
+.accueil .txt-acc{
+    top: 9rem;
+    left: 1rem;
+}
+
+.accueil .txt-acc p{
+    font-size: 3rem;
+    font-family: 'sora', sans-serif;
+    overflow-x: hidden;
 }
