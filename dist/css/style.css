@@ -39,11 +39,24 @@ header .conteneur nav{
 
 header .conteneur nav ul li a{
     color: #000;
+    transition: all .2s ease-in-out;
+}
+
+header .conteneur nav ul li a:hover{
+    color: var(--couleurPrincipal)!important;
+    font-weight: 500;
 }
 
 header .cont button{
+    transition: background-color .4s ease-in-out;
     padding: 0.6rem 1.5rem;
     color: var(--couleurPrincipal);
+    background-color: #fff;
     border-radius: 50px;
     border: 1px solid var(--couleurPrincipal);
+}
+
+header .cont button:hover{
+    color: #fff;
+    background-color: var(--couleurPrincipal);
 }
