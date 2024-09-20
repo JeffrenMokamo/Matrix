@@ -20,6 +20,7 @@
 
 body{
     font-size: 1rem;
+    overflow-x: hidden;
 }
 
 /* La navigation active */
@@ -27,6 +28,16 @@ body{
 .link-active{
     color: var(--couleurPrincipal)!important;
     font-weight: 500;
+}
+
+/* Preload */
+
+.preload{
+    display: flex;
+    z-index: 200;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--colorWhite);
 }
 
 /* Nav-bar */
@@ -73,16 +84,27 @@ header .conteneur nav ul li a{
 
 .accueil video{
     width: 100%;
-
 }
 
 .accueil .txt-acc{
-    top: 9rem;
-    left: 1rem;
+    top: 8rem;
+    left: 2rem;
 }
 
 .accueil .txt-acc p{
     font-size: 3rem;
     font-family: 'sora', sans-serif;
     overflow-x: hidden;
+}
+
+/* Section About */
+
+.apropos{
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+}
+
+.apropos .conteneur-apropos{
+    height: 100%;
 }

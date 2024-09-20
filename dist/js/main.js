@@ -17,3 +17,13 @@ function setActiveLink(){
 }
 
 window.addEventListener('load', setActiveLink());
+
+// Preload
+
+const Preload = document.querySelector('.preload');
+
+setTimeout(() => {
+    
+    Preload.style.display = 'none';
+
+}, 3000);
