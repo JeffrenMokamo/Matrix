@@ -17,8 +17,9 @@
     --couleurPrincipal: #0077b5;
     --colorWhite: #ffffff;
     --couleurSecondaire: gray;
-    --couleurSuple: rgba(217, 217, 217, .5);
+    --couleurSuple: rgba(217, 217, 217, .4);
     --titlePolice: 'sora', sans-serif;
+    --sizeTitle: 100;
 }
 
 /* Scroll-bar */
@@ -28,15 +29,11 @@
 }
 
 ::-webkit-scrollbar-track{
-    background-color: var(--colorWhite);
+    background-color: var(--couleurSecondaire);
 }
 
 ::-webkit-scrollbar-thumb{
     border-radius: 10px;
-    background-color: var(--couleurSecondaire);
-}
-
-::-webkit-scrollbar-thumb:hover{
     background-color: var(--couleurSuple);
 }
 
@@ -54,6 +51,26 @@ body{
     font-weight: 500;
 }
 
+/* Quelquels classes pour éviter les redondances  */
+
+.tgTitre{
+    font-size: 6rem;
+    font-family: var(--titlePolice);
+    font-weight: var(--sizeTitle);
+}
+
+.titreMoyen{
+    font-family: var(--titlePolice);
+    font-weight: var(--sizeTitle);
+    font-size: 4rem;
+}
+
+.petitTitre{
+    font-size: 2.5rem;
+    font-family: var(--titlePolice);
+    font-weight: var(--sizeTitle);
+}
+
 /* Preload */
 
 .preload{
@@ -67,7 +84,7 @@ body{
 /* meche */
 
 #meche{
-    left: -100px;
+    left: -200px;
     top: 0;
 }
 
@@ -77,7 +94,7 @@ header{
     padding: 20px;
     /* border-bottom: 1px solid rgba(217, 217, 217, .5); */
     z-index: 100;
-    /* background-color: var(--colorWhite); */
+    background-color: var(--colorWhite);
 }
 
 header .conteneur nav{
@@ -86,12 +103,16 @@ header .conteneur nav{
 
 header .conteneur nav ul li a{
     color: #000;
-    transition: all .2s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+header .conteneur nav ul li a:hover{
+    color: var(--couleurPrincipal)!important;
 }
 
 /* Pseudo :is() */
 
-:is(header, .accueil) button {
+:is(header, .accueil, .form-cont) button {
     transition: background-color .4s ease-in-out;
     padding: 0.6rem 1.5rem;
     color: var(--colorWhite);
@@ -100,9 +121,9 @@ header .conteneur nav ul li a{
     border: 1px solid var(--couleurPrincipal);
 }
 
-:is(header, .accueil) button:hover{
+:is(header, .accueil, .form-cont) button:hover{
     color: var(--couleurPrincipal);
-    background-color: var(--colorWhite);   
+    background-color: var(--colorWhite);  
 }
 
 /* Section Accueil */
@@ -111,12 +132,6 @@ header .conteneur nav ul li a{
     width: 100%;
     margin: 100px 0 10rem 0;
     padding: 0 1.5rem 0 4.5rem;
-}
-
-.accueil .txt-acc h1{
-    font-size: 6rem;
-    font-family: var(--titlePolice);
-    font-weight: 100;
 }
 
 .accueil #offre{
@@ -143,23 +158,26 @@ header .conteneur nav ul li a{
     margin-bottom: 10rem;
 }
 
-:where(.apropos) h4{
-    font-size: 3.5rem;
-    font-family: var(--titlePolice);
-    font-weight: 100;
+:is(.apropos) button{
+    transition:all .4s ease-in-out;
+    padding: 0.6rem 1.5rem;
+    color: #000;
+    background-color: var(--colorWhite);
+    border-radius: 50px;
+    border: 2px solid var(--couleurSuple);
+}
+
+:is(.apropos) button:hover{
+    color: var(--colorWhite);
+    background-color: var(--couleurPrincipal); 
+    border: 2px solid var(--couleurPrincipal); 
 }
 
 /* Services */
 
 .service-section{
     padding: 0 1.5rem;
-    margin-bottom: 10rem;
-}
-
-.service-section .title-section h1{
-    font-family: var(--titlePolice);
-    font-weight: 100;
-    font-size: 4rem;
+    margin-bottom: 7rem;
 }
 
 .service-section .container-services{
@@ -174,19 +192,106 @@ header .conteneur nav ul li a{
     width: 100%;
 }
 
-:where(.service-section .container-mg-serv) img{
+.service-section .container-mg-serv img{
     transform: scale(1);
     transition: transform .3s ease-in-out;
     will-change: transform;
     cursor: pointer;
 }
 
-:where(.service-section .container-mg-serv) img:hover{
+.service-section .container-mg-serv img:hover{
     transform: scale(1.2);
 }
 
-:where(.service-section) h4{
-    font-size: 2.5rem;
+/* Pole-section */
+
+.pole-section{
+    margin-bottom: 20rem;
+    height: 100vh;
+}
+
+.pole-section .pole p{
+    font-size: 2rem;
     font-family: var(--titlePolice);
-    font-weight: 100;
+}
+
+.pole-section video{
+    width: 100%;
+    top: 0;
+    z-index: -1;
+}
+
+.pole-section .pole-container .pole ul li{
+    color: var(--colorWhite);
+    font-size: 1.5rem;
+}
+
+.pole-section .pole-container .pole ul li i{
+    color: var(--couleurPrincipal);
+}
+
+/* Cont-whatsapp */
+
+.contact-whatsapp{
+    width: 100%;
+    margin-bottom: 10rem;
+}
+
+.contact-whatsapp .container-contact-whatsapp{
+    width: 100%;
+}
+
+.contact-whatsapp .container-contact-whatsapp a button{
+    transition:all .3s ease-in-out;
+    padding: 0.6rem 1.5rem;
+    background-color: #25d366;
+    border-radius: 50px;
+    border: 2px solid #25d366;
+}
+
+.contact-whatsapp .container-contact-whatsapp a button:hover{
+    background-color: var(--colorWhite);
+    color: #25d366!important;
+}
+
+/*Footer*/
+
+footer .container-footer{
+    border: 2px solid var(--couleurSuple);
+}
+
+footer .container-footer .matrix{
+    border: 1px solid var(--couleurSuple);
+}
+
+footer .container-footer .liens a p{
+    font-size: 4rem;
+}
+
+footer .container-footer .copy{
+    border: 1px solid var(--couleurSuple);
+}
+
+/* page Contact */
+
+.contact{
+    margin: 100px 0 7rem 0;
+    background-image: url('../../assets/images/pexels-sebastian-166055\ 1 (1).png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+.contact .container-contact{
+    z-index: 10;
+}
+
+.contact .sombre{
+    background-color: rgba(0, 0, 0, .2);
+    inset: 0;
+    bottom: 0;
+}
+
+.contact .container-contact a{
+    font-size: 2rem;
 }
