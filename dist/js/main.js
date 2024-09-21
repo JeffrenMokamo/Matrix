@@ -26,7 +26,7 @@ setTimeout(() => {
     
     Preload.style.display = 'none';
 
-}, 3000);
+}, 1000);
 
 // Slide Accueil
 
