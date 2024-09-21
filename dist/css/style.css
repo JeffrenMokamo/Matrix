@@ -51,7 +51,7 @@ body{
     font-weight: 500;
 }
 
-/* Quelquels classes pour éviter les redondances  */
+/* Quelquels classes pour éviter les redondances des propiétés*/
 
 .tgTitre{
     font-size: 6rem;
@@ -71,6 +71,10 @@ body{
     font-weight: var(--sizeTitle);
 }
 
+.bordure{
+    border: 1px solid var(--couleurSuple);
+}
+
 /* Preload */
 
 .preload{
@@ -79,13 +83,6 @@ body{
     width: 100%;
     min-height: 100vh;
     background-color: var(--colorWhite);
-}
-
-/* meche */
-
-#meche{
-    left: -200px;
-    top: 0;
 }
 
 /* Nav-bar */
@@ -186,10 +183,6 @@ header .conteneur nav ul li a:hover{
     width: 100%;
 }
 
-.service-section .container-services .services .service{
-    border: 1px solid var(--couleurSuple);
-}
-
 .service-section .container-services .services .service img{
     width: 100%;
 }
@@ -262,16 +255,8 @@ footer .container-footer{
     border: 2px solid var(--couleurSuple);
 }
 
-footer .container-footer .matrix{
-    border: 1px solid var(--couleurSuple);
-}
-
 footer .container-footer .liens a p{
     font-size: 4rem;
-}
-
-footer .container-footer .copy{
-    border: 1px solid var(--couleurSuple);
 }
 
 /* page Contact */
@@ -316,10 +301,6 @@ footer .container-footer .copy{
     margin-bottom: 7rem;
 }
 
-:is(.app, .acc){
-    border: 1px solid var(--couleurSuple);
-}
-
 .equipe{
     margin-bottom: 6rem;
 }
@@ -329,4 +310,14 @@ footer .container-footer .copy{
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+/* Services */
+
+.service-home{
+    margin: 60px 0 7rem 0;
+}
+
+.services-section{
+    margin-bottom: 7rem;
 }
