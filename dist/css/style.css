@@ -278,7 +278,7 @@ footer .container-footer .liens a p{
 }
 
 .contact .sombre{
-    background-color: rgba(0, 0, 0, .2);
+    background-color: rgba(0, 0, 0, .1);
     inset: 0;
     bottom: 0;
 }
@@ -320,4 +320,28 @@ footer .container-footer .liens a p{
 
 .services-section{
     margin-bottom: 7rem;
+}
+
+/* Produits */
+
+.home-produit{
+    margin: 60px 0 8rem 0;
+}
+
+.home-produit .container-home-produit{
+    background-image: url('../../assets/images/img-serv-1.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 6rem;
+}
+
+.produit{
+    margin-bottom: 8rem;
+}
+
+.produit .container-produit .produits{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
 }
