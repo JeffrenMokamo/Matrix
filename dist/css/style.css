@@ -89,7 +89,7 @@ body{
 
 header{
     padding: 0 10px;
-    /* border-bottom: 1px solid rgba(217, 217, 217, .5); */
+    border-bottom: 1px solid rgba(217, 217, 217, .3);
     z-index: 100;
     height: 60px;
     background-color: var(--colorWhite);
@@ -129,7 +129,7 @@ header .conteneur nav ul li a:hover{
 
 .accueil{
     width: 100%;
-    margin: 100px 0 10rem 0;
+    margin: 130px 0 10rem 0;
     padding: 0 1.5rem 0 4.5rem;
 }
 
@@ -201,19 +201,16 @@ header .conteneur nav ul li a:hover{
 /* Pole-section */
 
 .pole-section{
-    margin-bottom: 20rem;
+    margin-bottom: 10rem;
     height: 100vh;
+    background-image: url('../../assets/images/pexels-sebastian-166055\ 1\ \(1\).png');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
 .pole-section .pole p{
     font-size: 2rem;
     font-family: var(--titlePolice);
-}
-
-.pole-section video{
-    width: 100%;
-    top: 0;
-    z-index: -1;
 }
 
 .pole-section .pole-container .pole ul li{
@@ -344,4 +341,47 @@ footer .container-footer .liens a p{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+    width: 100%;
+}
+
+/* @Media query */
+
+@media (max-width: 1230px){
+
+    .tgTitre{
+        font-size: 4.5rem;
+   }
+
+   .titreMoyen{
+        font-size: 3.5rem;
+   }
+
+   body{
+    background-color: teal;
+   }
+
+}
+
+@media (max-width: 1000px){
+
+    body{
+        background-color: red;
+    }
+
+}
+
+@media (max-width: 868px){
+
+    body{
+        background-color: green;
+    }
+
+}
+
+@media (max-width: 568px){
+
+    body{
+        background-color: yellow;
+    }
+
 }
