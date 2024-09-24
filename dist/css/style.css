@@ -260,7 +260,7 @@ footer .container-footer .liens a p{
 
 .contact{
     margin: 60px 0 7rem 0;
-    background-image: url('../../assets/images/pexels-sebastian-166055\ 1 (1).png');
+    background-image: url('../../assets/images/pexels-sebastian-166055\ 1 \(1\).png');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed; 
@@ -356,16 +356,29 @@ footer .container-footer .liens a p{
         font-size: 3.5rem;
    }
 
-   body{
-    background-color: teal;
-   }
-
 }
 
 @media (max-width: 1000px){
 
-    body{
-        background-color: red;
+    .titreMoyen{
+        font-size: 3rem;
+    }
+
+    .petitTitre{
+        font-size: 2rem;
+    }
+
+    footer .container-footer .liens a p{
+        font-size: 3rem;
+    }
+
+    .accueil{
+        padding: 0 10px 0 10px;
+        margin-bottom: 27rem;
+    }
+
+    .apropos{
+        margin-bottom: 28rem;
     }
 
 }
