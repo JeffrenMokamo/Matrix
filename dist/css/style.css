@@ -53,6 +53,10 @@ body{
 
 /* Quelquels classes pour éviter les redondances des propiétés*/
 
+.navBarDimPhone{
+    transform: translateX(0)!important;
+}
+
 .tgTitre{
     font-size: 6rem;
     font-family: var(--titlePolice);
@@ -95,8 +99,18 @@ header{
     background-color: var(--colorWhite);
 }
 
+header label{
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    display: none;
+}
+
 header .conteneur nav{
     margin-top: 17px;
+    transition: transform .5s ease-in-out;
+    transform: translateX(0);
 }
 
 header .conteneur nav ul li a{
@@ -385,10 +399,6 @@ footer .container-footer .liens a p{
 
 @media (max-width: 868px){
 
-    body{
-        background-color: green;
-    }
-
     footer .container-footer .liens a p{
         font-size: 2rem;
     }
@@ -405,12 +415,74 @@ footer .container-footer .liens a p{
         font-size: 3.5rem;
     }
 
+    .pole-section .pole p{
+        font-size: 1.5rem;
+    }
+    
+    .pole-section .pole-container .pole ul li{
+        font-size: 1rem;
+    }
+
+    header label{
+        display: block;
+    }
+
+    header .conteneur nav{
+        position: absolute;
+        width: 100%!important;
+        inset: 70px 0 10% 0;
+        transform: translateX(-110%);
+    }
+
+    header .conteneur nav ul{
+        display: block!important;
+    }
+
+    header .conteneur nav ul li a{
+        font-size: 1.2rem;
+        font-family: 'sora', sans-serif;
+        font-weight: 200;
+    }
+
+    header .cont{
+        position: absolute;
+        right: 10%;
+    }
+
 }
 
 @media (max-width: 568px){
 
-    body{
-        background-color: yellow;
+    .titreMoyen{
+        font-size: 2rem;
+    }
+
+    .petitTitre{
+        font-size: 1.2rem;
+    }
+
+    .tgTitre{
+        font-size: 2.5rem;
+    }
+
+    .accueil{
+        margin-bottom: 20rem;
+    }
+
+    .apropos{
+        margin-bottom: 20rem;
+    }
+
+    footer .container-footer .liens a p{
+        font-size: 1.5rem;
+    }
+
+    .pole-section .pole p{
+        font-size: 1.5rem;
+    }
+    
+    .pole-section .pole-container .pole ul li{
+        font-size: 1rem;
     }
 
 }

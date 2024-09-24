@@ -30,8 +30,6 @@ setTimeout(() => {
 
 // Slide Accueil
 
-
-
 const carouSlide = document.querySelector('.slide');
 const widthImage = 100;
 const images = document.querySelectorAll('.slide-item');
@@ -59,3 +57,16 @@ setInterval(() => {
 }, 5000);
 
 window.addEventListener('resize', changeCarousel());
+
+// Navbar
+
+const btnToggle = document.querySelector('#btn-toggle');
+const navBar = document.querySelector('header .conteneur nav');
+
+navBar.style.backgroundColor = "var(--colorWhite)!important";
+
+btnToggle.addEventListener('click', function(){
+
+    navBar.classList.toggle('navBarDimPhone');
+
+})
