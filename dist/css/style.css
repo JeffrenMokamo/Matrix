@@ -55,6 +55,8 @@ body{
 
 .navBarDimPhone{
     transform: translateX(0)!important;
+    transition: transform .5s ease-in-out;
+    background-color: #fff!important;
 }
 
 .tgTitre{
@@ -109,7 +111,6 @@ header label{
 
 header .conteneur nav{
     margin-top: 17px;
-    transition: transform .5s ease-in-out;
     transform: translateX(0);
 }
 
@@ -370,6 +371,15 @@ footer .container-footer .liens a p{
         font-size: 3.5rem;
    }
 
+   .accueil{
+    padding: 0 10px 0 10px;
+    margin-bottom: 7rem;
+    }
+
+    .apropos{
+        margin-bottom: 7rem;
+    }
+
 }
 
 @media (max-width: 1000px){
@@ -446,7 +456,7 @@ footer .container-footer .liens a p{
 
     header .cont{
         position: absolute;
-        right: 10%;
+        right: 15%;
     }
 
 }
@@ -466,11 +476,11 @@ footer .container-footer .liens a p{
     }
 
     .accueil{
-        margin-bottom: 20rem;
+        margin-bottom: 10rem;
     }
 
     .apropos{
-        margin-bottom: 20rem;
+        margin-bottom: 10rem;
     }
 
     footer .container-footer .liens a p{
